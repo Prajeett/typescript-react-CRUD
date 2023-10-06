@@ -1,43 +1,34 @@
-import React, { useState } from 'react';
-import './App.css';
-import InputField from './components/InputField';
-import { Todo } from './components/model';
-
-
-
+import React, { useState } from "react";
+import "./App.css";
+import InputField from "./components/InputField";
+import { Todo } from "./components/model";
+import TodoList from "./components/TodoList"
 
 const App: React.FC = () => {
+  const [todo, setTodo] = useState<string>("");
 
+  const [todos, setTodos] = useState<Todo[]>([]);
 
-const [todo, setTodo] = useState <string>("");
+  const handleAdd = (e: React.FormEvent) => {
+    e.preventDefault();
 
-const [todos, setTodos] = useState <Todo[]>([])
+    if (todo) {
+      setTodos([...todos, { id: Date.now(), todo, isDone: false }]);
 
+      setTodo("");
+    }
+  };
 
-const handleAdd = (e:React.FormEvent) => {
-  e.preventDefault();
-
-  if (todo) {
-    setTodos([...todos, {id: Date.now(),todo, isDone:false   }]);
-    setTodo("");
-  }
-
-
-  
-}
-
-
-
+  console.log(todo);
+  console.log(todos);
 
   return (
     <div className="App">
-      <span className='heading'>CURD app</span>
-      <InputField todo={todo} setTodo = {setTodo} handleAdd = {handleAdd}/>
+      <span className="heading">CRUD APP</span>
+      <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+    <TodoList todos = {todos} setTodos={setTodos}/>
     </div>
   );
-}
+};
 
 export default App;
-
-
-
