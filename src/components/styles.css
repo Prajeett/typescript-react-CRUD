@@ -1,54 +1,90 @@
-.input{
+.input {
+  display: flex;
+  width: 90%;
+  border-radius: 50px;
+  position: relative;
+  align-items: center;
+}
+
+.input_box {
+  width: 100%;
+  border-radius: 50px;
+  padding: 20px 30px;
+  font-size: 25px;
+  border: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 5px black;
+}
+.input_box:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.input_submit {
+  position: absolute;
+  width: 50px;
+  height: 39px;
+  margin: 12px;
+  border-radius: 50px;
+  right: 0px;
+  border: none;
+  font-size: 15px;
+  background-color: rgb(236, 228, 246);
+  cursor: pointer;
+
+  color: rgb(119, 107, 107);
+  transition: 0.3s all;
+  box-shadow: 0 0 10px black;
+}
+.input_submit:hover {
+  background-color: rgb(192, 171, 216);
+}
+.input_submit:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+.todos {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.todos_single{
     display: flex;
-    width: 90%;
-    border-radius: 50px;
-    position: relative;
-    align-items: center;
-
-
+    width: auto;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding: 20px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEWHzvpLEdEdAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=");
+    margin-top: 15px;
 }
 
-.input_box{
-    width: 100%;
-    border-radius: 50px;
-    padding: 20px 30px;
-    font-size: 25px;
+.todos_single--text{
+    flex: 1;
+    padding: 5px;
     border: none;
-    transition: 0.2s;
-    box-shadow: inset 0 0 5px black;
-
-}
-.input_box:focus{
-    box-shadow: 0 0 10px 1000px rgba(0,0,0,0.5);outline:none;
+    font-size: 20px;
 }
 
-.input_submit{
-    position: absolute;
-    width: 50px;
-    height: 39px;
-    margin: 12px;
-    border-radius: 50px;
-    right: 0px;
-    border: none;
-    font-size: 15px;
-    background-color: rgb(236, 228, 246);
+.todos_single--text:focus{
+    outline: none;
+}
+
+.icon{
     cursor: pointer;
+    font-size: 25px;
+    margin-left: 10px;
+}
 
-    
-    color: rgb(119, 107, 107);
-    transition: 0.3s all;
-    box-shadow: 0 0 10px black;
-}
-.input_submit:hover{
-    background-color:rgb(192, 171, 216) ;
-}
-.input_submit:active{
-    transform: scale(0.8) ;
-    box-shadow: 0 0 5px black;
-}
-.todos{
-    display: flex;
-    justify-content: space-evenly;
-    width: 90%;
-    flex-wrap: wrap;
+@media (max-width:700px) {
+    .input{
+        width:95%;
+    }
+    .todos{
+        width: 95%;
+    }
+    .todos_single{
+        width: 100%;
+    }
 }
