@@ -69,7 +69,7 @@ const SingleTodo = ({ todo, todos, setTodos }: Props) => {
             }
           }}
         >
-          <FaEdit />
+          <FaEdit className="this_icon"/>
         </span>
         <span
           className="icon"
@@ -77,7 +77,7 @@ const SingleTodo = ({ todo, todos, setTodos }: Props) => {
             handleDelete(todo.id);
           }}
         >
-          <MdDeleteForever />
+          <MdDeleteForever className="this_icon"/>
         </span>
         <span
           className="icon"
@@ -85,7 +85,7 @@ const SingleTodo = ({ todo, todos, setTodos }: Props) => {
             handleDone(todo.id);
           }}
         >
-          <MdOutlineDoneOutline />
+          <MdOutlineDoneOutline className="this_icon"/>
         </span>
       </div>
     </form>

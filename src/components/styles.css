@@ -45,46 +45,77 @@
 }
 .todos {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 90%;
   flex-wrap: wrap;
 }
 
-.todos_single{
-    display: flex;
-    width: auto;
-    border-radius: 5px;
-    padding-top: 15px;
-    padding: 20px;
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEWHzvpLEdEdAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=");
-    margin-top: 15px;
+.todos_single {
+  display: flex;
+  width: auto;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding: 20px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEWHzvpLEdEdAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=");
+  margin-top: 15px;
+  margin-right: 15px;
 }
 
-.todos_single--text{
-    flex: 1;
-    padding: 5px;
-    border: none;
-    font-size: 20px;
+.todos_single--text {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
 }
 
-.todos_single--text:focus{
-    outline: none;
+.todos_single--text:focus {
+  outline: none;
 }
 
-.icon{
-    cursor: pointer;
-    font-size: 25px;
-    margin-left: 10px;
+.icon {
+  cursor: pointer;
+  font-size: 25px;
+  margin-left: 10px;
 }
 
-@media (max-width:700px) {
-    .input{
-        width:95%;
-    }
-    .todos{
-        width: 95%;
-    }
-    .todos_single{
-        width: 100%;
-    }
+@keyframes icone {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+.this_icon:hover {
+  opacity: 0.3;
+  animation: icone 0.3s slidein;
+  fill: rgba(255, 0, 0, 0.809);
+
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.this_icon:active {
+  opacity: 0.3;
+  animation: icone 0.3s ease-in;
+  fill: rgb(255, 0, 0);
+
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
+  }
+  .todos {
+    width: 95%;
+  }
+  .todos_single {
+    width: 100%;
+  }
 }
