@@ -36,6 +36,7 @@ const TodoList = ({
                 key={todo.id}
               />
             ))}
+            {provided.placeholder}
           </div>
         )}
       </Droppable>
@@ -57,6 +58,7 @@ const TodoList = ({
                 key={todo.id}
               />
             ))}
+            {provided.placeholder}
           </div>
         )}
       </Droppable>

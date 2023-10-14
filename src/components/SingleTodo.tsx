@@ -44,6 +44,12 @@ const SingleTodo = ({ todo, todos, setTodos, index }: Props) => {
     inputRef.current?.focus();
   }, [edit]);
 
+
+
+
+
+
+
   return (
     <Draggable draggableId={todo.id.toString()} index={index}>
       {(provided) => (
