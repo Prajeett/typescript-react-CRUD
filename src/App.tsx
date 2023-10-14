@@ -58,12 +58,13 @@ const App: React.FC = () => {
 
   }
   return (
-
+    
 
     <DragDropContext onDragEnd= {onDragEnd}>
 
           <div className="App">
       <span className="heading">CRUD APP</span>
+      <p>Please feel to drag and drop : ) </p>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       <TodoList
         todos={todos}
@@ -71,11 +72,13 @@ const App: React.FC = () => {
         completedTodos={completedTodos}
         setCompletedTodos={setCompletedTodos}
       />
+          
     </div>
+
       
     </DragDropContext>
 
-
+    
 
   );
 };
