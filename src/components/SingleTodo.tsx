@@ -74,7 +74,7 @@ const SingleTodo = ({ todo, todos, setTodos, index }: Props) => {
             <span className="todos_single--text">{todo.todo}</span>
           )}
 
-          <div>
+          <div className="icons">
             <span
               className="icon"
               onClick={() => {
